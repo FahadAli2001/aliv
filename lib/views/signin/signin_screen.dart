@@ -2,7 +2,7 @@ import 'package:aliv/comman/custom_button.dart';
 import 'package:aliv/comman/custom_textfield.dart';
 import 'package:aliv/const/icons.dart';
 import 'package:aliv/const/images.dart';
-import 'package:aliv/views/home/home_screen.dart';
+import 'package:aliv/views/navbar/navbar.dart';
 import 'package:aliv/views/signup/signup_screen.dart';
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 
@@ -157,7 +157,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const Home()));
+                                      builder: (context) => const NavBar()));
                             })),
                     //
                     SizedBox(

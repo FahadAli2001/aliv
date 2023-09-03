@@ -13,3 +13,7 @@ String weatherIcon = "assets/weather_icon.png";
 String clockIcon = "assets/clock_icon.png";
 String personsIcon = "assets/persons.png";
 String favIcon = "assets/fav_icon.png";
+String transHomeIcon = "assets/trans_home.png";
+String purpleHomeIcon = "assets/purple_home.png";
+String transCart = "assets/trans_cart.png";
+String purpleCart = "assets/purple_cart.png";
