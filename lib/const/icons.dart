@@ -9,3 +9,7 @@ String cartIcon = "assets/Cart.png";
 String chatIcon = "assets/Chat.png";
 String notificationIcon = "assets/notification_icon.png";
 String searchIcon = "assets/search_icon.png";
+String weatherIcon = "assets/weather_icon.png";
+String clockIcon = "assets/clock_icon.png";
+String personsIcon = "assets/persons.png";
+String favIcon = "assets/fav_icon.png";
