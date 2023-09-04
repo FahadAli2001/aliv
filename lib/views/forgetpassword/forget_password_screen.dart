@@ -1,22 +1,17 @@
-import 'package:aliv/comman/custom_textfield.dart';
-import 'package:aliv/const/icons.dart';
-import 'package:aliv/const/images.dart';
-import 'package:aliv/views/forgetpassword/forget_password_screen.dart';
-import 'package:aliv/views/signup/signup_screen.dart';
+import 'package:aliv/views/forgetpassword/forget_password_otp_screen.dart';
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
-
 import 'package:flutter/material.dart';
 
-import '../navbar/navbar.dart';
+import '../../const/images.dart';
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({super.key});
+class ForgetPasswordScreen extends StatefulWidget {
+  const ForgetPasswordScreen({super.key});
 
   @override
-  State<SignInScreen> createState() => _SignInScreenState();
+  State<ForgetPasswordScreen> createState() => _ForgetPasswordScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   final countryPicker = const FlCountryCodePicker();
   CountryCode? countryCode;
   @override
@@ -56,7 +51,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                     //
                     Text(
-                      "Welcome Back",
+                      "Forget Password",
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -67,7 +62,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       padding:
                           EdgeInsets.symmetric(horizontal: 30, vertical: 7),
                       child: Text(
-                        'The journey to Aliv Events starts here and \n                Aliv together with YOU!',
+                        '5 digits code will send to your number',
                         style: TextStyle(color: Colors.grey),
                       ),
                     ),
@@ -124,76 +119,20 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                     //
-                    CustomTextField(
-                      label: "*****",
-                      prefixIcon: Image.asset(
-                        lockIcon,
-                        scale: 0.7,
-                      ),
-                      suffixIcon: Image.asset(
-                        passHideIcon,
-                        scale: 1.1,
-                      ),
-                    ),
-                    //
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 35, vertical: 15),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ForgetPasswordScreen()));
-                        },
-                        child: const Align(
-                          alignment: Alignment.centerRight,
-                          child: Text(
-                            "Forget Password",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ),
-                      ),
-                    ),
+
                     //
                     InkWell(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const NavBar()));
+                                builder: (context) =>
+                                    const ForgetPasswordOtpScreen()));
                       },
                       child: SizedBox(
-                          width: size.width, child: Image.asset(signInButton)),
+                          width: size.width, child: Image.asset(sendButton)),
                     ),
                     //
-                    SizedBox(
-                      height: size.height * 0.05,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const SignUpScreen()));
-                      },
-                      child: RichText(
-                        text: const TextSpan(
-                          text: "Don't have an account ?",
-                          style: TextStyle(color: Colors.black),
-                          children: <TextSpan>[
-                            TextSpan(
-                              text: 'Create Account',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.blue,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ))

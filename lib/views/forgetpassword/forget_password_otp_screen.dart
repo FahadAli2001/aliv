@@ -1,17 +1,19 @@
-import 'package:aliv/views/signup/signup_profile_info_screen.dart';
+import 'package:aliv/views/forgetpassword/reset_password_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/style.dart';
+
 import '../../const/images.dart';
 
-class OtpScreen extends StatefulWidget {
-  const OtpScreen({super.key});
+class ForgetPasswordOtpScreen extends StatefulWidget {
+  const ForgetPasswordOtpScreen({super.key});
 
   @override
-  State<OtpScreen> createState() => _OtpScreenState();
+  State<ForgetPasswordOtpScreen> createState() =>
+      _ForgetPasswordOtpScreenState();
 }
 
-class _OtpScreenState extends State<OtpScreen> {
+class _ForgetPasswordOtpScreenState extends State<ForgetPasswordOtpScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
@@ -95,7 +97,7 @@ class _OtpScreenState extends State<OtpScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      const SignUpProfileInfoScreen()));
+                                      const ResetPasswordScreen()));
                         },
                         child: SizedBox(
                             width: size.width,

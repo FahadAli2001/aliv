@@ -10,3 +10,6 @@ String purpleNoti = "assets/purple_noti.png";
 String signInButton = "assets/signin_button.png";
 String createAccountButton = "assets/create_account_buttons.png";
 String signupButton = "assets/signup_button.png";
+String verifyButton = "assets/verify_button.png";
+String sendButton = "assets/send_button.png";
+String continueButton = "assets/continue_button.png";
