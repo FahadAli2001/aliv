@@ -4,8 +4,6 @@ import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/style.dart';
 
 import '../../comman/custom_button.dart';
-import '../../comman/custom_textfield.dart';
-import '../../const/icons.dart';
 import '../../const/images.dart';
 
 class OtpScreen extends StatefulWidget {

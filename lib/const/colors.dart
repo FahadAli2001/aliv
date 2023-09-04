@@ -10,3 +10,4 @@ int averageBlue = ((color1.blue + color2.blue) / 2).round();
 Color primaryColor = Color.fromARGB(255, averageRed, averageGreen, averageBlue);
 
 Color appBarColor = const Color(0xffF1F5F5);
+Color blueColor = const Color(0xff13AEE1);

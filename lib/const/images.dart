@@ -4,3 +4,4 @@ String liveButton = "assets/live_button.png";
 String detailBanner = "assets/detail_banner.png";
 String buyTicketButton = "assets/buy_ticket_button.png";
 String newsBanner = "assets/news_banner.png";
+String blueClouds = "assets/blue_clouds.png";
