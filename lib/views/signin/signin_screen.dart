@@ -1,12 +1,12 @@
-import 'package:aliv/comman/custom_button.dart';
 import 'package:aliv/comman/custom_textfield.dart';
 import 'package:aliv/const/icons.dart';
 import 'package:aliv/const/images.dart';
-import 'package:aliv/views/navbar/navbar.dart';
 import 'package:aliv/views/signup/signup_screen.dart';
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 
 import 'package:flutter/material.dart';
+
+import '../navbar/navbar.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -89,7 +89,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               width: 100, // Adjust the width as needed
                               height: 50,
                               decoration: BoxDecoration(
-                                color: Colors.grey.shade300,
+                                color: Colors.grey.shade100,
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Row(
@@ -114,8 +114,10 @@ class _SignInScreenState extends State<SignInScreen> {
                             child: TextField(
                               keyboardType: TextInputType.phone,
                               decoration: InputDecoration(
-                                  fillColor: Colors.grey.shade300,
+                                  fillColor: Colors.grey.shade100,
                                   border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.grey.shade100),
                                       borderRadius: BorderRadius.circular(10)),
                                   filled: true,
                                   label: const Text("Enter Phone Number")),
@@ -149,16 +151,16 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                     //
-                    SizedBox(
-                        width: size.width,
-                        child: CustomButton(
-                            text: "Sign In",
-                            onpressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const NavBar()));
-                            })),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const NavBar()));
+                      },
+                      child: SizedBox(
+                          width: size.width, child: Image.asset(signInButton)),
+                    ),
                     //
                     SizedBox(
                       height: size.height * 0.05,

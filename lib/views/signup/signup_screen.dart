@@ -1,8 +1,6 @@
 import 'package:aliv/views/signup/otp_screen.dart';
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 import 'package:flutter/material.dart';
-
-import '../../comman/custom_button.dart';
 import '../../comman/custom_textfield.dart';
 import '../../const/icons.dart';
 import '../../const/images.dart';
@@ -141,16 +139,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
 
                     //
-                    SizedBox(
-                        width: size.width,
-                        child: CustomButton(
-                            text: "Sign Up",
-                            onpressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const OtpScreen()));
-                            })),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const OtpScreen()));
+                      },
+                      child: SizedBox(
+                          width: size.width, child: Image.asset(signupButton)),
+                    ),
                     //
                     SizedBox(
                       height: size.height * 0.05,

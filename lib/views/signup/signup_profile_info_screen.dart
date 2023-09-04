@@ -1,4 +1,3 @@
-import 'package:aliv/comman/custom_button.dart';
 import 'package:aliv/comman/custom_textfield.dart';
 import 'package:aliv/const/icons.dart';
 import 'package:flutter/material.dart';
@@ -155,8 +154,7 @@ class _SignUpProfileInfoScreenState extends State<SignUpProfileInfoScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: SizedBox(
                           width: size.width,
-                          child: CustomButton(
-                              text: "Create Account", onpressed: () {})),
+                          child: Image.asset(createAccountButton)),
                     ),
                   ],
                 ),
