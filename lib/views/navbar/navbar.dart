@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:aliv/views/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -26,10 +24,8 @@ class _NavBarState extends State<NavBar> {
   ];
 
   void handleNavBar(int index) {
-    print("Tapped index: $index");
     setState(() {
       currentIndex = index;
-      print("Current index: $currentIndex");
     });
   }
 
@@ -49,7 +45,6 @@ class _NavBarState extends State<NavBar> {
               InkWell(
                   onTap: () {
                     handleNavBar(0);
-                    log("0" + currentIndex.toString());
                   },
                   child: currentIndex == 0
                       ? Image.asset(purpleHomeIcon)
@@ -57,7 +52,6 @@ class _NavBarState extends State<NavBar> {
               InkWell(
                   onTap: () {
                     handleNavBar(1);
-                    log("1" + currentIndex.toString());
                   },
                   child: currentIndex == 1
                       ? Image.asset(purpleCart)

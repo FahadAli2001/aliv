@@ -3,6 +3,7 @@ import 'package:aliv/comman/home/news_and_update.dart';
 import 'package:aliv/comman/home/up_coming_event.dart';
 import 'package:aliv/const/icons.dart';
 import 'package:aliv/const/images.dart';
+import 'package:aliv/views/notifications/notifications_screen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,15 @@ class _HomeState extends State<Home> {
                     Image.asset(liveButton),
                     Image.asset(cartIcon),
                     Image.asset(chatIcon),
-                    Image.asset(notificationIcon)
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const NotificationsScreen()));
+                        },
+                        child: Image.asset(notificationIcon))
                   ],
                 ),
               )

@@ -5,3 +5,5 @@ String detailBanner = "assets/detail_banner.png";
 String buyTicketButton = "assets/buy_ticket_button.png";
 String newsBanner = "assets/news_banner.png";
 String blueClouds = "assets/blue_clouds.png";
+String nascentSponser = "assets/nascent_sponser.png";
+String purpleNoti = "assets/purple_noti.png";
