@@ -1,6 +1,7 @@
 import 'package:aliv/const/colors.dart';
 import 'package:aliv/const/icons.dart';
 import 'package:aliv/const/images.dart';
+import 'package:aliv/views/speaker_details/speakers_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class EventDetailsScreen extends StatefulWidget {
@@ -230,98 +231,107 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Container(
-                      width: size.width * 0.7,
-                      // color: Colors.amber,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            top: 50,
-                            left: 5,
-                            child: Container(
-                              width: size.width * 0.68,
-                              height: size.height * 0.33,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(15),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black
-                                        .withOpacity(0.2), // Shadow color
-                                    spreadRadius: 3, // Spread radius
-                                    blurRadius: 5, // Blur radius
-                                    offset: const Offset(0, 2), // Offset
-                                  ),
-                                ],
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 25.0),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "Guest Speaker",
-                                      style: TextStyle(
-                                          color: blueColor,
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.bold),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const SpeakerDetailScreen()));
+                      },
+                      child: Container(
+                        width: size.width * 0.7,
+                        // color: Colors.amber,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              top: 50,
+                              left: 5,
+                              child: Container(
+                                width: size.width * 0.68,
+                                height: size.height * 0.33,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black
+                                          .withOpacity(0.2), // Shadow color
+                                      spreadRadius: 3, // Spread radius
+                                      blurRadius: 5, // Blur radius
+                                      offset: const Offset(0, 2), // Offset
                                     ),
-                                    const SizedBox(
-                                      height: 5,
-                                    ),
-                                    //
-                                    const Text(
-                                      "Jessica",
-                                      style: TextStyle(
-                                          fontSize: 25,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 5,
-                                    ),
-                                    const Text(
-                                      "Director of human resources",
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        color: Colors.orange,
-                                      ),
-                                    ),
-                                    const Text(
-                                      "Director of human resources manageing director etc etc etc",
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 50,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Image.asset(fbIcon),
-                                        Image.asset(twitterIcon),
-                                        Image.asset(instagramIcon),
-                                        Image.asset(youtubeIcon)
-                                      ],
-                                    )
                                   ],
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 25.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Guest Speaker",
+                                        style: TextStyle(
+                                            color: blueColor,
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      //
+                                      const Text(
+                                        "Jessica",
+                                        style: TextStyle(
+                                            fontSize: 25,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      const Text(
+                                        "Director of human resources",
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.orange,
+                                        ),
+                                      ),
+                                      const Text(
+                                        "Director of human resources manageing director etc etc etc",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Image.asset(fbIcon),
+                                          Image.asset(twitterIcon),
+                                          Image.asset(instagramIcon),
+                                          Image.asset(youtubeIcon)
+                                        ],
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          const Positioned(
-                            left: 50,
-                            right: 50,
-                            child: CircleAvatar(
-                              radius: 45,
-                              backgroundColor: Colors.black,
+                            const Positioned(
+                              left: 50,
+                              right: 50,
+                              child: CircleAvatar(
+                                radius: 45,
+                                backgroundColor: Colors.black,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     )
                   ],

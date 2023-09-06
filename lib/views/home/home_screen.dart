@@ -1,6 +1,7 @@
 import 'package:aliv/comman/custom_textfield.dart';
 import 'package:aliv/comman/home/news_and_update.dart';
 import 'package:aliv/comman/home/up_coming_event.dart';
+import 'package:aliv/const/colors.dart';
 import 'package:aliv/const/icons.dart';
 import 'package:aliv/const/images.dart';
 import 'package:aliv/views/notifications/notifications_screen.dart';
@@ -24,7 +25,7 @@ class _HomeState extends State<Home> {
       backgroundColor: const Color(0xffF1F5F5),
       appBar: AppBar(
           elevation: 0,
-          backgroundColor: const Color(0xffF1F5F5),
+          backgroundColor: appBarColor,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
