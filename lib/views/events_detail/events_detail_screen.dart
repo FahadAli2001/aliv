@@ -1,6 +1,7 @@
 import 'package:aliv/const/colors.dart';
 import 'package:aliv/const/icons.dart';
 import 'package:aliv/const/images.dart';
+import 'package:aliv/views/buy_tickets/buy_tickets_screen.dart';
 import 'package:aliv/views/speaker_details/speakers_detail_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -396,7 +397,15 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                         ],
                       ),
                       //
-                      Image.asset(buyTicketButton)
+                      InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const BuyTicketsScreen()));
+                          },
+                          child: Image.asset(buyTicketButton))
                     ],
                   ),
                 ),

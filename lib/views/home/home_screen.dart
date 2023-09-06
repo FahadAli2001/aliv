@@ -4,6 +4,7 @@ import 'package:aliv/comman/home/up_coming_event.dart';
 import 'package:aliv/const/colors.dart';
 import 'package:aliv/const/icons.dart';
 import 'package:aliv/const/images.dart';
+import 'package:aliv/views/liveNow/live_now_alert_box.dart';
 import 'package:aliv/views/notifications/notifications_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -38,7 +39,15 @@ class _HomeState extends State<Home> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset(liveButton),
+                    InkWell(
+                        onTap: () {
+                          showDialog(
+                              context: context,
+                              builder: (context) {
+                                return const LiveNowAlertBox();
+                              });
+                        },
+                        child: Image.asset(liveButton)),
                     Image.asset(cartIcon),
                     Image.asset(chatIcon),
                     InkWell(
