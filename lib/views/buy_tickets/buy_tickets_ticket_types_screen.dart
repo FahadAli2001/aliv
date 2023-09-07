@@ -1,3 +1,4 @@
+import 'package:aliv/views/cart/cart_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../const/colors.dart';
@@ -27,10 +28,7 @@ class _BuyTicketTicketTypesScreenState
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: const Icon(
-                Icons.arrow_back_ios,
-                color: Colors.black,
-              )),
+              icon: Image.asset(backIcon)),
           actions: [
             Padding(
               padding:
@@ -179,11 +177,11 @@ class _BuyTicketTicketTypesScreenState
                             //
                             InkWell(
                                 onTap: () {
-                                  // Navigator.push(
-                                  //     context,
-                                  //     MaterialPageRoute(
-                                  //         builder: (context) =>
-                                  //             const BuyTicketsScreen()));
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const CartScreen()));
                                 },
                                 child: Image.asset(buyTicketButton))
                           ],

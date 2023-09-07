@@ -11,3 +11,4 @@ Color primaryColor = Color.fromARGB(255, averageRed, averageGreen, averageBlue);
 
 Color appBarColor = const Color(0xffF1F5F5);
 Color blueColor = const Color(0xff13AEE1);
+Color redColor = const Color(0xffEE354B);

@@ -24,3 +24,5 @@ String twitterIcon = "assets/twitter.png";
 String instagramIcon = "assets/instagram.png";
 String youtubeIcon = "assets/youtube.png";
 String blueLinkIcon = "assets/blue_link_icon.png";
+String orangeTimerIcon = "assets/timer.png";
+String backIcon = "assets/back_icon.png";
