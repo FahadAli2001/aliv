@@ -57,11 +57,149 @@ class _CartScreenState extends State<CartScreen> {
               padding: EdgeInsets.symmetric(vertical: appSymerticPadding),
               child: Container(
                 width: size.width,
-                height: size.height * 0.4,
+                // height: size.height * 0.4,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15)),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: appSymerticPadding),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: appSymerticPadding - 10,
+                        ),
+                        child: Row(
+                          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            const Text(
+                              "Tikcet No",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              width: size.width * 0.025,
+                            ),
+                            const Text(
+                              "Section",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              width: size.width * 0.025,
+                            ),
+                            const Text(
+                              "Row",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              width: size.width * 0.025,
+                            ),
+                            const Text(
+                              "Seat",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              width: size.width * 0.025,
+                            ),
+                            const Text(
+                              "Price",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        ),
+                      ),
+                      //
+                      SizedBox(
+                        height: size.height * 0.02,
+                      ),
+                      //
+                      for (var i = 0; i < 3; i++) ...[
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: appSymerticPadding - 10,
+                              vertical: appSymerticPadding - 15),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              const Text(
+                                "J-98522245",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                width: size.width * 0.02,
+                              ),
+                              const Text(
+                                "A",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                width: size.width * 0.02,
+                              ),
+                              const Text(
+                                "02",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                width: size.width * 0.02,
+                              ),
+                              const Text(
+                                "11",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                width: size.width * 0.02,
+                              ),
+                              const Text(
+                                "\$260.00",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              SizedBox(
+                                width: size.width * 0.02,
+                              ),
+                              Image.asset(redCloseIcon)
+                            ],
+                          ),
+                        ),
+
+                        //
+                        const Divider(
+                          color: Colors.grey,
+                          height: 0.1,
+                          thickness: 1,
+                        )
+                      ]
+                    ],
+                  ),
+                ),
               ),
+              //
+            ),
+
+            //
+            Container(
+              width: size.width,
+              height: size.height * 0.15,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(15)),
             )
           ],
         ),

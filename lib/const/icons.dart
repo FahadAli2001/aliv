@@ -26,3 +26,4 @@ String youtubeIcon = "assets/youtube.png";
 String blueLinkIcon = "assets/blue_link_icon.png";
 String orangeTimerIcon = "assets/timer.png";
 String backIcon = "assets/back_icon.png";
+String redCloseIcon = "assets/red_close_icon.png";
