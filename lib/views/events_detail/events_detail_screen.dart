@@ -381,17 +381,19 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
+                          Text(
                             "Starting From",
-                            style:
-                                TextStyle(color: Colors.orange, fontSize: 10),
+                            style: TextStyle(
+                                color: Colors.orange,
+                                fontSize: size.width * 0.03),
                           ),
                           Text(
                             "\$65.00",
                             style: TextStyle(
                                 color: blueColor,
-                                fontSize: 25,
+                                fontSize: size.width * 0.06,
                                 fontWeight: FontWeight.bold),
                           ),
                         ],

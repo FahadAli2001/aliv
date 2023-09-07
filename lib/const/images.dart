@@ -14,3 +14,5 @@ String verifyButton = "assets/verify_button.png";
 String sendButton = "assets/send_button.png";
 String continueButton = "assets/continue_button.png";
 String girlImage = "assets/girl_image.png";
+String checkOutButton = "assets/checkout_button.png";
+String applyButton = "assets/apply_btn.png";
