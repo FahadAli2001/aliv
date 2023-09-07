@@ -1,8 +1,8 @@
+import 'package:aliv/const/paddings.dart';
 import 'package:flutter/material.dart';
 
 import '../../const/colors.dart';
 import '../../const/icons.dart';
-import '../../const/paddings.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -16,6 +16,7 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
     return Scaffold(
+      backgroundColor: appBarColor,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: appBarColor,
@@ -39,6 +40,31 @@ class _CartScreenState extends State<CartScreen> {
             ),
           )
         ],
+      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(
+            horizontal: appSymerticPadding, vertical: appSymerticPadding),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "New Year Parade (05)",
+              style: TextStyle(
+                  fontSize: size.width * 0.045, fontWeight: FontWeight.bold),
+            ),
+            //
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: appSymerticPadding),
+              child: Container(
+                width: size.width,
+                height: size.height * 0.4,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15)),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
